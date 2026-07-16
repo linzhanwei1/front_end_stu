@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://cdn.staticfile.net/vue/3.5.13/vue.global.js"
+      defer
+    ></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Vue Lists and Conditional content</h1>
+    </header>
+    <section id="assignment">
+      <!-- 1) Add code to manage a list of tasks in a Vue app -->
+      <!-- When clicking "Add Task" a new task with the entered text should be added -->
+      <input type="text" v-model="taskInfo" />
+      <button @click="addTask">Add Task</button>
+      <ul v-if="tasks.length > 0 && showList">
+        <!-- 2) Output the list of tasks here -->
+        <li v-for="(task, index) in tasks" :key="task">
+          {{ task }}{{ index }}
+        </li>
+      </ul>
+      <p v-else></p>
+      <!-- 3) When the below button is pressed, the list should be shown or hidden -->
+      <!-- BONUS: Also update the button caption -->
+      <button @click="toggleList">{{ showButtonStatus }} List</button>
+    </section>
+  </body>
+</html>

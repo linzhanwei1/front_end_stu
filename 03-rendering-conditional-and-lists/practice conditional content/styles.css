@@ -8,18 +8,7 @@ html {
 
 body {
   margin: 0 auto;
-  max-width: 800px;
-  background-image: radial-gradient(
-    50% 50% at 50% 50%,
-    rgba(38, 166, 151, 0.1) 0%,
-    rgba(33, 36, 41, 0) 100%
-  );
-  background: linear-gradient(
-    111.63deg,
-    rgb(57, 79, 80) 0%,
-    rgb(72, 78, 69) 49.48%,
-    rgb(57, 79, 80) 100%
-  );
+  max-width: 750px;
 }
 
 header {
@@ -38,7 +27,6 @@ header {
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
-  background: white;
 }
 
 #assignment h2 {
@@ -48,13 +36,23 @@ header {
   margin: 0 0 1rem 0;
 }
 
-#assignment p {
+#assignment ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+#assignment li {
+  margin: 1rem 0;
   font-size: 1.25rem;
   font-weight: bold;
   background-color: #8ddba4;
   padding: 0.5rem;
   color: #1f1f1f;
   border-radius: 25px;
+  border: 3px dashed transparent;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
 }
 
 #assignment input {
@@ -74,8 +72,11 @@ header {
   border: 1px solid #ff0077;
   background-color: #ff0077;
   color: white;
-  padding: 0.05rem 1rem;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.26);
+  margin: 4px 8px;
+  padding: 0.2em 0.6em;
+  border-radius: 10px;
+  text-transform: capitalize;
 }
 
 #assignment button:hover,
@@ -83,4 +84,9 @@ header {
   background-color: #ec3169;
   border-color: #ec3169;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+}
+
+#assignment li.crossed {
+  background: rgba(128, 128, 128, 0.1);
+  text-decoration: line-through;
 }
