@@ -10,6 +10,7 @@ const app = Vue.createApp({
       this.currentUserInput = event.target.value;
     },
     setText() {
+<<<<<<< HEAD
       // this.message = this.currentUserInput;
       this.message = this.$refs.userText.value;
       // console.dir(this.$refs.userText);
@@ -71,3 +72,11 @@ app2.mount('#app2');
 // proxy.message = 'Hello!!!!';
 
 // console.log(proxy.longMessage);
+=======
+      this.message = this.currentUserInput;
+    },
+  },
+});
+
+app.mount('#app');
+>>>>>>> 0d38afb3b3bed2c6ee3bff83a320ed79fe36aea3
